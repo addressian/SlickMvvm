@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dialogSurface">#FFFFFF</color>
+    <color name="themeDefault">#44BCC7</color>
+    <color name="primaryText">#0F1728</color>
+</resources>
