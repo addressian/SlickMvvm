@@ -1,30 +1,25 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id ("kotlin-kapt")
-    id ("maven-publish")
+    id("kotlin-kapt")
+    id("maven-publish")
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("maven") {
-                from (components["release"])
-                groupId = "com.addressian.slickmvvm"
-                artifactId = "slickMvvm"
-                version = "0.0.1"
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.addressian.slickmvvm"
+            artifactId = "slickMvvm"
+            version = "0.0.1"
+
+            afterEvaluate {
+                from(components["release"])
             }
         }
     }
 }
 
 android {
-    publishing {
-        singleVariant("release"){
-            withSourcesJar()
-        }
-    }
-
     namespace = "com.addressian.slickmvvm"
     compileSdk = 34
 
