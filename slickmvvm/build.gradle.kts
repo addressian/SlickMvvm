@@ -20,6 +20,12 @@ publishing {
 }
 
 android {
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
+
     namespace = "com.addressian.slickmvvm"
     compileSdk = 34
 
