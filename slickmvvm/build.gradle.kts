@@ -7,10 +7,10 @@ plugins {
 
 publishing {
     publications {
-        register<MavenPublication>("release") {
+        register<MavenPublication>("MyLibrary") {
             groupId = "com.addressian.slickmvvm"
             artifactId = "slickMvvm"
-            version = "0.0.1"
+            version = "0.0.01"
 
             afterEvaluate {
                 from(components["release"])
@@ -20,12 +20,6 @@ publishing {
 }
 
 android {
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-        }
-    }
-
     namespace = "com.addressian.slickmvvm"
     compileSdk = 34
 
