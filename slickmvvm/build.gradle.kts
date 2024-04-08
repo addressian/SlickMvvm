@@ -62,38 +62,27 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.kotlin.reflect)
 
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.22")
+    implementation(libs.mmkv)
 
-    implementation("com.tencent:mmkv:1.2.14")
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+    implementation(libs.converter.gson)
+    implementation(libs.retrofit)
+    implementation(libs.gson)
+    implementation(libs.ok2curl)
 
-    /*网络相关*/
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.7.2")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.google.code.gson:gson:2.9.0")
-    implementation("com.github.mrmike:ok2curl:0.7.0")
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.fragment.ktx)
 
-    /*协程以及协程组件*/
-    //coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
-    //ViewModelScope
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
-    //LifecycleScope
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
-    //liveData
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
-    // KTX for the ViewModel component
-    implementation("androidx.fragment:fragment-ktx:1.6.2")
+    implementation(libs.utilcodex)
 
-    // UtilCode
-    implementation("com.blankj:utilcodex:1.31.1")
+    implementation(libs.eventbus)
 
-    // EventBus
-    implementation("org.greenrobot:eventbus:3.2.0")
-
-    //Glide
-    implementation("com.github.bumptech.glide:glide:4.14.2")
-    annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
 }
