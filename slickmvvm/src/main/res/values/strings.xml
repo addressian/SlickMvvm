@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="toast_the_client_is_abnormal_please_check_app_update">客户端异常，请检查版本更新~</string>
     <string name="toast_server_abnormality_please_try_it_later">服务器异常，请稍后再试~</string>
     <string name="toast_network_connection_failed">网络连接失败，请检查网络</string>
