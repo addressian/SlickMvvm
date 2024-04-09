@@ -5,4 +5,20 @@
         <item name="android:textColorPrimary">@color/loadingDialogTextColorPrimary</item>
         <item name="android:background">@color/loadingDialogBackground</item>
     </style>
+
+    <!-- 使用 Dialog 控件外的背景不变暗 -->
+    <style name="FullDialogBackgroundDialogStyle" parent="Theme.AppCompat.Dialog">
+        <!-- 设置窗口是否是悬浮显示-->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否允许对话框的背景变暗。为true则充许变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 提示框是否有边框-->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+    </style>
 </resources>

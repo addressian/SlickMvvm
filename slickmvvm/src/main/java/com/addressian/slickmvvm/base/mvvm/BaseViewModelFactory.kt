@@ -1,4 +1,4 @@
-package com.addressian.slickmvvm.base
+package com.addressian.slickmvvm.base.mvvm
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

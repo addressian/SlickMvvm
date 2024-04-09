@@ -1,4 +1,4 @@
-package com.addressian.slickmvvm.base
+package com.addressian.slickmvvm.base.mvvm
 
 import android.os.Bundle
 

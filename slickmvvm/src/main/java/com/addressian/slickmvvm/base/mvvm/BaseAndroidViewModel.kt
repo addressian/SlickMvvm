@@ -1,10 +1,11 @@
-package com.addressian.slickmvvm.base
+package com.addressian.slickmvvm.base.mvvm
 
 import android.app.Application
 import androidx.annotation.StringRes
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.addressian.slickmvvm.base.BaseApplication
 import com.addressian.slickmvvm.bean.IViewModelAction
 import com.addressian.slickmvvm.bean.NetworkError
 import com.addressian.slickmvvm.bean.NetworkException
@@ -141,8 +142,7 @@ open class BaseAndroidViewModel(application: Application) : AndroidViewModel(app
     fun showToast(@StringRes resIdRes: Int, toastLength: Int = BaseActionEvent.SHOW_TOAST) {
         val baseActionEvent =
             BaseActionEvent(toastLength)
-        baseActionEvent.message = BaseApplication
-            .getInstance()
+        baseActionEvent.message = BaseApplication.getInstance()
             .getString(resIdRes)
         actionLiveData.value = baseActionEvent
     }

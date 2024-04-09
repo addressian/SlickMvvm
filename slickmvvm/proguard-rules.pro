@@ -148,11 +148,8 @@ public static int e(...);
 }
 # --------------------------------------------可定制化区--------------------------------------------#
 #---------------------------------1.实体类---------------------------------
--keep class com.maiseed.mytan.bean.** { *; }
--keep class com.maiseed.mytan.core.data.local.** { *; }
--keep class com.maiseed.mytan.core.data.remote.request.**{*;}
--keep class com.maiseed.mytan.core.data.remove.response.**{*;}
--keep class com.maiseed.mytan.core.base.BaseResponse{*;}
+-keep class com.addressian.slickmvvm.data.local.** { *; }
+-keep class com.addressian.slickmvvm.data.remove.BaseResponse{*;}
 
 #--------------------------------------------------------------------------
 #---------------------------------2.与JS交互的类-----------------------------

@@ -1,4 +1,4 @@
-package com.addressian.slickmvvm.base
+package com.addressian.slickmvvm.base.mvvm
 
 import androidx.databinding.ViewDataBinding
 

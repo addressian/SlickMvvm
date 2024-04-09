@@ -1,7 +1,7 @@
 package com.addressian.slickmvvm.bean
 
 import androidx.lifecycle.MutableLiveData
-import com.addressian.slickmvvm.base.BaseActionEvent
+import com.addressian.slickmvvm.base.mvvm.BaseActionEvent
 import kotlinx.coroutines.CoroutineScope
 
 interface IViewModelAction {

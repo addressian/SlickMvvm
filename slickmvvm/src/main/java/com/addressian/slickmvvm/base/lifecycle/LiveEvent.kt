@@ -1,4 +1,4 @@
-package com.addressian.slickmvvm.base
+package com.addressian.slickmvvm.base.lifecycle
 
 import androidx.annotation.MainThread
 import androidx.collection.ArraySet

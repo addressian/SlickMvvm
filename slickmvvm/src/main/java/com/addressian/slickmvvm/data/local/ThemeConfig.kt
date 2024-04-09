@@ -18,7 +18,7 @@ class ThemeConfig private constructor() : MMKVOwner {
     var THEME_TYPE: String by mmkvString(AppearanceUtils.AppearanceType.Light.value)
 
     companion object {
-        const val FILE_ID = "AppearanceConfig"
+        const val FILE_ID = "ThemeConfig"
         private var instance: ThemeConfig? = null
         fun getInstance(): ThemeConfig {
             return instance ?: synchronized(this) {

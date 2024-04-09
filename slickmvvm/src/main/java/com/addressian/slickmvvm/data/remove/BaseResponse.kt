@@ -1,4 +1,4 @@
-package com.addressian.slickmvvm.base
+package com.addressian.slickmvvm.data.remove
 
 import com.google.gson.annotations.SerializedName
 

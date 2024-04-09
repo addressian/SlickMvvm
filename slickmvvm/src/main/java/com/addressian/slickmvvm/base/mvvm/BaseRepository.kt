@@ -1,4 +1,4 @@
-package com.addressian.slickmvvm.base
+package com.addressian.slickmvvm.base.mvvm
 
 import com.addressian.slickmvvm.bean.ResultWrapper
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
