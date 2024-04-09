@@ -10,7 +10,7 @@ publishing {
         register<MavenPublication>("MyLibrary") {
             groupId = "com.addressian.slickmvvm"
             artifactId = "slickMvvm"
-            version = "0.0.06"
+            version = "0.0.07"
 
             afterEvaluate {
                 from(components["release"])
