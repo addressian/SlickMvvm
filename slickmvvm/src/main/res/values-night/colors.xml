@@ -2,5 +2,5 @@
 <resources>
     <color name="loadingDialogBackground">#1C1C1E</color>
     <color name="loadingDialogColorAccent">#44BCC7</color>
-    <color name="loadingTextColorPrimary">#EBF0F2</color>
+    <color name="loadingDialogTextColorPrimary">#EBF0F2</color>
 </resources>

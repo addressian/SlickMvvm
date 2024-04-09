@@ -2,7 +2,7 @@
 <resources>
     <style name="LoadingDialogStyle" parent="Theme.AppCompat.DayNight.Dialog.Alert">
         <item name="colorAccent">@color/loadingDialogColorAccent</item>
-        <item name="android:textColorPrimary">@color/loadingTextColorPrimary</item>
+        <item name="android:textColorPrimary">@color/loadingDialogTextColorPrimary</item>
         <item name="android:background">@color/loadingDialogBackground</item>
     </style>
 </resources>
