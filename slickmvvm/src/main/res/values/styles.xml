@@ -6,6 +6,15 @@
         <item name="android:background">@color/loadingDialogBackground</item>
     </style>
 
+    <style name="TransparentBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/TransparentBottomSheetStyle</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="TransparentBottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
     <!-- 使用 Dialog 控件外的背景不变暗 -->
     <style name="FullDialogBackgroundDialogStyle" parent="Theme.AppCompat.Dialog">
         <!-- 设置窗口是否是悬浮显示-->
