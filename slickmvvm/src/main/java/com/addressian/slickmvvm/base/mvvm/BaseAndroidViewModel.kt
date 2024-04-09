@@ -10,6 +10,7 @@ import com.addressian.slickmvvm.bean.IViewModelAction
 import com.addressian.slickmvvm.bean.NetworkError
 import com.addressian.slickmvvm.bean.NetworkException
 import com.addressian.slickmvvm.extension.parseToErrorBody
+import com.blankj.utilcode.util.StringUtils
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -142,8 +143,7 @@ open class BaseAndroidViewModel(application: Application) : AndroidViewModel(app
     fun showToast(@StringRes resIdRes: Int, toastLength: Int = BaseActionEvent.SHOW_TOAST) {
         val baseActionEvent =
             BaseActionEvent(toastLength)
-        baseActionEvent.message = BaseApplication.getInstance()
-            .getString(resIdRes)
+        baseActionEvent.message = StringUtils.getString(resIdRes)
         actionLiveData.value = baseActionEvent
     }
 
