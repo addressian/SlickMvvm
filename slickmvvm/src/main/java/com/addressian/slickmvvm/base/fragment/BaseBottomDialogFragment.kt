@@ -16,9 +16,13 @@ abstract class BaseBottomDialogFragment : BaseDialogFragment() {
     open fun getDraggable() = true
     open fun getState() = BottomSheetBehavior.STATE_EXPANDED
     open fun isSkipCollapsed() = true
+    open fun canGoBack() = true
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = super.onCreateDialog(savedInstanceState)
+        if (!canGoBack()) {
+            disableGoBack(dialog)
+        }
         dialog.setCancelable(getCancelable())
         dialog.setCanceledOnTouchOutside(getCanceledOnTouchOutside())
         dialog.setOnShowListener {
@@ -65,5 +69,11 @@ abstract class BaseBottomDialogFragment : BaseDialogFragment() {
             layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT
         }
         bottomSheet?.layoutParams = layoutParams
+    }
+
+    private fun disableGoBack(dialog: Dialog) {
+        dialog.setOnKeyListener { _, _, _ ->
+            return@setOnKeyListener true
+        }
     }
 }
