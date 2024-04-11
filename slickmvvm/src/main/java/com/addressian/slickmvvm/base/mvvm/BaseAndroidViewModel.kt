@@ -33,19 +33,6 @@ open class BaseAndroidViewModel(application: Application) : AndroidViewModel(app
         actionLiveData.value = baseActionEvent
     }
 
-    /**
-     * des 在函数执行期间显示加载框
-     */
-    fun <T> load(
-        message: String? = null,
-        execute: () -> T
-    ): T {
-        this.showLoadingDialog(message)
-        return execute().also {
-            this.dismissLoadingDialog()
-        }
-    }
-
     fun launch(execute: suspend () -> Unit) =
         viewModelScope.launch(exceptionHandler) {
             execute()
@@ -155,5 +142,18 @@ open class BaseAndroidViewModel(application: Application) : AndroidViewModel(app
     override fun finishWithResultOk() {
         actionLiveData.value =
             BaseActionEvent(BaseActionEvent.FINISH_WITH_RESULT_OK)
+    }
+
+    /**
+     * des 在函数执行期间显示加载框
+     */
+    inline fun <T> load(
+        message: String? = null,
+        execute: () -> T
+    ): T {
+        this.showLoadingDialog(message)
+        return execute().also {
+            this.dismissLoadingDialog()
+        }
     }
 }
